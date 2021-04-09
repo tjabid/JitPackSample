@@ -23,47 +23,47 @@ android {
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    flavorDimensions "default"
-    productFlavors {
-
-        demobank {
-            dimension "default"
-            versionName "1.0"
-        }
-
-        kfh {
-            dimension "default"
-            versionName "1.0"
-        }
-
-        nbb {
-            dimension "default"
-            versionName "1.0"
-        }
-
-        ithmaar {
-            dimension "default"
-            versionName "1.0"
-        }
-
-        khcb {
-            dimension "default"
-            versionName "1.0"
-        }
-
-        nbk {
-            dimension "default"
-            versionName "1.0"
-        }
-        abb {
-            dimension "default"
-            versionName "1.0"
-        }
-        cl {
-            dimension "default"
-            versionName "1.0"
-        }
-    }
+//    flavorDimensions "default"
+//    productFlavors {
+//
+//        demobank {
+//            dimension "default"
+//            versionName "1.0"
+//        }
+//
+//        kfh {
+//            dimension "default"
+//            versionName "1.0"
+//        }
+//
+//        nbb {
+//            dimension "default"
+//            versionName "1.0"
+//        }
+//
+//        ithmaar {
+//            dimension "default"
+//            versionName "1.0"
+//        }
+//
+//        khcb {
+//            dimension "default"
+//            versionName "1.0"
+//        }
+//
+//        nbk {
+//            dimension "default"
+//            versionName "1.0"
+//        }
+//        abb {
+//            dimension "default"
+//            versionName "1.0"
+//        }
+//        cl {
+//            dimension "default"
+//            versionName "1.0"
+//        }
+//    }
 
     buildTypes {
         release {

@@ -325,3 +325,16 @@ dependencies {
 
     api 'com.jakewharton.timber:timber:4.7.1'
 }
+
+
+allprojects {
+    repositories {
+
+        maven { url "https://jitpack.io" }
+//        maven {
+//            url 'https://oss.sonatype.org/content/repositories/ksoap2-android-releases'
+//        }
+    }
+}
+
+apply plugin: 'com.google.gms.google-services'

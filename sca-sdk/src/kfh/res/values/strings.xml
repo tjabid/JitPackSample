@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="registration_pin_title">Activate Open Banking</string>
+
+    <!--Terms & Conditions-->
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="accept">I AGREE</string>
+    <string name="terms_conditions_title">Please read these Terms &amp; Conditions carefully</string>
+    <string name="dummy_terms_conditions">1. Definitions\n1.1 Annual Fee the annual fee applicable to the Card as set out in clause 3.1 or such other amount as may be specified from time to time.\n\n1.2 Card The KFH - Bahrain Visa Card issued to you.\n\n1.3 Cards The KFH - Bahrain Visa Card and any Supplementary Card issued at your request.\n\n1.4 Card Account the account maintained by us for your use of the Card and subject to these Terms and Conditions.\n\n1.5 Cardholder - The person in whose name the Card Account was opened.\n\n1.6 Card Tansactions - The purchase of goods or servies or obtaining Cash Advances by using th eCard, the Card’s number of the PIN or in any other manner authorised by the card holder.</string>
+    <!--Terms & Conditions-->
+
+    <!-- registration -->
+    <string name="registered_successfully">Activated successfully!</string>
+    <!-- registration -->
+
+    <!-- consent authorization -->
+    <string name="title_consent_authorize_ais">Account Info Service</string>
+    <string name="title_consent_authorize_pis">Payment Initiation Service</string>
+    <string name="auth_consent_intro">Select the accounts to be shared</string>
+    <string name="decline">Decline Request</string>
+    <string name="approve">Approve Request</string>
+    <string name="identification">IBAN:</string>
+    <!-- consent authorization -->
+
+    <!-- Dashboard -->
+    <string name="dashboard_welcome_msg">Welcome to\nTarabut Gateway Open Banking</string>
+    <!-- Dashboard -->
+
+    <!-- Manage Consent -->
+    <string name="manage_consent_intro">Select the consent you want to revoke</string>
+    <!-- Manage Consent -->
+
+    <!-- Revoke Consent -->
+    <string name="revoke_consent_intro">You are about to revoke the following consent.\nAre you sure?</string>
+    <!-- Revoke Consent -->
+
+</resources>

@@ -2,7 +2,7 @@ package com.tg.jitpack_lib
 
 import android.app.Application
 
-object TgBobfSdk {
+object TestTgBobfSdk {
 
     @JvmStatic
     fun init(

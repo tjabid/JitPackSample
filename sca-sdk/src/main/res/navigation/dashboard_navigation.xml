@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/dashboard_navigation"
+    app:startDestination="@+id/registrationFragment">
+
+    <fragment
+        android:id="@+id/dashboardFragment"
+        android:name="tg.sdk.sca.presentation.ui.dashboard.DashboardFragment"
+        android:label="dashboardFragment"
+        tools:layout="@layout/fragment_dashboard">
+
+        <action
+            android:id="@+id/action_dashboard_to_manage_consent"
+            app:destination="@id/manageConsentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/termsConditionsFragment"
+        android:name="tg.sdk.sca.presentation.ui.termsandconditions.TermsAndConditionsFragment"
+        android:label="termsConditionsFragment"
+        tools:layout="@layout/fragment_terms_and_conditions">
+
+        <action
+            android:id="@+id/action_terms_to_register"
+            app:destination="@id/registrationFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/dashboard_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registrationFragment"
+        android:name="tg.sdk.sca.presentation.ui.register.RegistrationFragment"
+        android:label="registrationFragment"
+        tools:layout="@layout/fragment_registration">
+
+        <action
+            android:id="@+id/action_registration_to_auth"
+            app:destination="@id/authenticationFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/authenticationFragment"
+        android:name="tg.sdk.sca.presentation.ui.authenticate.AuthenticationFragment"
+        android:label="authenticationFragment"
+        tools:layout="@layout/fragment_authentication">
+
+        <argument
+            android:name="sessionId"
+            android:defaultValue="@null"
+            app:argType="string"
+            app:nullable="true"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/manageConsentFragment"
+        android:name="tg.sdk.sca.presentation.ui.manageconsent.ManageConsentFragment"
+        android:label="manageConsentFragment"
+        tools:layout="@layout/fragment_manage_consent">
+
+        <action
+            android:id="@+id/action_manage_to_revoke_consent"
+            app:destination="@+id/revokeConsentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/revokeConsentFragment"
+        android:name="tg.sdk.sca.presentation.ui.revokeconsent.RevokeConsentFragment"
+        android:label="revokeConsentFragment"
+        tools:layout="@layout/fragment_revoke_consent">
+
+        <argument
+            android:name="tgBobfConsent"
+            android:defaultValue="@null"
+            app:argType="tg.sdk.sca.data.consent.TgBobfConsent"
+            app:nullable="true"/>
+
+        <action
+            android:id="@+id/action_revoke_to_dashboard"
+            app:destination="@+id/dashboardFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/dashboardFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+</navigation>

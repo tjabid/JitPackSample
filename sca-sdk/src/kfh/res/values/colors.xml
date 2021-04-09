@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_blue">#001A33</color>
+    <color name="turquoise">#216E78</color>
+
+    <!-- TG main button colors -->
+    <color name="fast_pay_button">#20ABA7</color>
+    <color name="fast_pay_button_selected">#62BA9E</color>
+    <color name="fast_pay_button_text">#216E78</color>
+
+    <!-- TG toolbar colors -->
+    <color name="toolbarBackground">@android:color/transparent</color>
+    <color name="toolbarAccent">@color/dark_blue</color>
+
+</resources>

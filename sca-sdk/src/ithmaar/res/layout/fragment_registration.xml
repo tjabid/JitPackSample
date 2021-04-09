@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintGuide_begin="@dimen/margin_outer_vertical"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintGuide_end="@dimen/margin_outer_vertical"
+            android:orientation="vertical"/>
+
+        <include
+            android:id="@+id/toolbarEnrollment"
+            layout="@layout/component_toolbar"/>
+
+        <ProgressBar
+            android:id="@+id/progress"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:visibility="gone"
+            android:indeterminateTint="@color/dark_blue"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/messageLogo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:padding="50dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/registration"
+            app:layout_constraintBottom_toTopOf="@+id/messageLabel"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"  />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/messageLabel"
+            style="@style/TextMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            tools:text="Successfully registered"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/messageGroup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:constraint_referenced_ids="messageLogo,messageLabel" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pinView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarEnrollment"
+            tools:visibility="visible">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/title"
+                style="@style/TextMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:text="@string/registration_pin_msg"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.8" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelPin"
+                style="@style/TextSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/enter_pin"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/title" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pinLayout"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                app:errorTextAppearance="@style/InputFieldErrorStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelPin"
+                app:layout_constraintVertical_chainStyle="packed">
+
+                <EditText
+                    android:id="@+id/pin"
+                    style="@style/InputFieldStyle"
+                    android:ems="8"
+                    android:hint="@string/enter_pin"
+                    android:importantForAutofill="no"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:nextFocusDown="@id/labelPinConfirm"
+                    tools:text="1234" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/separator1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pinLayout" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/labelPinConfirm"
+                style="@style/TextSmall"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="@string/confirm_pin"
+                android:textColor="@color/dark_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator1" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/pinConfirmLayout"
+                style="@style/TextInputLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/padding_medium"
+                app:errorTextAppearance="@style/InputFieldErrorStyle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/labelPinConfirm"
+                app:layout_constraintVertical_chainStyle="packed"
+                app:passwordToggleEnabled="true">
+
+                <EditText
+                    android:id="@+id/pinConfirm"
+                    style="@style/InputFieldStyle"
+                    android:ems="8"
+                    android:hint="@string/confirm_pin"
+                    android:importantForAutofill="no"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:imeOptions="actionDone"
+                    tools:text="1234" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <View
+                android:id="@+id/separator2"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="0dp"
+                android:background="@color/grey"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/pinConfirmLayout" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnBiometricEnroll"
+                style="@style/ButtonTransparent"
+                android:text="@string/go_to_settings"
+                android:visibility="gone"
+                tools:visibility="visible"
+                app:layout_constraintBottom_toTopOf="@+id/btnContinue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator2"
+                app:layout_constraintVertical_bias="1.0" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/btnContinue"
+                style="@style/ButtonSolidTurquoise"
+                android:text="@string/button_continue"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/separator2"
+                app:layout_constraintVertical_bias="1.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

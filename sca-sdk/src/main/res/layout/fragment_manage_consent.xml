@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbarManageConsent"
+            layout="@layout/component_toolbar"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintGuide_begin="@dimen/margin_outer_vertical"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintGuide_end="@dimen/margin_outer_vertical"
+            android:orientation="vertical"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/consentTitle"
+            style="@style/TextMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_top_space"
+            android:layout_marginBottom="32dp"
+            android:text="@string/manage_consent_intro"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarManageConsent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvConsent"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            tools:listitem="@layout/cell_consent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consentTitle" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/manageConsentGroup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:constraint_referenced_ids="consentTitle,rvConsent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/consentNoItem"
+            style="@style/TextBody"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:visibility="gone"
+            android:text="@string/manage_consent_no_item"
+            android:textColor="@color/dark_blue"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarManageConsent"
+            app:layout_constraintVertical_bias="0.2" />
+
+
+        <include
+            android:id="@+id/pinViewInclude"
+            layout="@layout/component_auth_pin_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            tools:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarManageConsent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start" />
+
+        <include
+            android:id="@+id/progressInclude"
+            layout="@layout/component_progress"
+            android:visibility="gone"
+            tools:visibility="gone"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

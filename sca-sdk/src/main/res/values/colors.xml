@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000000</color>
+    <color name="dark_blue">#232d46</color>
+    <color name="turquoise">#2DC8AF</color>
+    <color name="turquoise_dark">#62BA9E</color>
+    <color name="green">#29ba89</color>
+    <color name="orange">#ec7d61</color>
+    <color name="orange_tint">#edc9bf</color>
+    <color name="red">#f53535</color>
+    <color name="grey">#b7b7b7</color>
+    <color name="grey_bg">#F0F0F0</color>
+    <color name="main_progress_bg">#F6F6F6</color>
+    <color name="white">#ffffff</color>
+
+    <color name="melon">#f07c5d</color>
+    <color name="pale">#f5ece4</color>
+    <color name="sea_foam_blue">#6dd1b1</color>
+    <color name="apple_green">#7cc41a</color>
+    <color name="colorAccent">@color/dark_blue</color>
+
+    <color name="error">#CB617B</color>
+
+    <!-- TG main button colors -->
+    <color name="fast_pay_button">#2DC8AF</color>
+    <color name="fast_pay_button_selected">#62BA9E</color>
+
+    <!-- TG toolbar colors -->
+    <color name="toolbarBackground">@color/dark_blue</color>
+    <color name="toolbarAccent">@color/white</color>
+
+    <!-- Input fields colors -->
+    <color name="input_layout_text_color">#333333</color>
+    <color name="inputLayoutFocused">@android:color/transparent</color>
+    <color name="inputLayoutUnfocused">@android:color/transparent</color>
+
+
+</resources>

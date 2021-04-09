@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/toolbarAuth"
+            layout="@layout/component_toolbar"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_start"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintGuide_begin="@dimen/margin_outer_vertical"
+            android:orientation="vertical"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_end"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintGuide_end="@dimen/margin_outer_vertical"
+            android:orientation="vertical"/>
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/authTitle"-->
+<!--            style="@style/TextMedium"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:layout_marginBottom="32dp"-->
+<!--            android:text="1130_11825_253402300799_1_1bcb4a27d42524de11325ec627b63878770a8651c0a0d8ddfc8fc06b92aea281634ff11f7d874c03851932304601439e"-->
+<!--            android:textColor="@color/dark_blue"-->
+<!--            android:gravity="center"-->
+<!--            app:layout_constraintBottom_toTopOf="@+id/btnAuthenticate"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/guide_end"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/guide_start"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.5" />-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/authTitle"
+            style="@style/TextMedium"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="32dp"
+            android:text="@string/auth_msg"
+            android:textColor="@color/dark_blue"
+            android:gravity="center"
+            app:layout_constraintBottom_toTopOf="@+id/btnAuthenticate"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.5" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/btnAuthenticate"
+            style="@style/ButtonSolidTurquoise"
+            android:text="@string/authenticate"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/authGroup"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:constraint_referenced_ids="btnAuthenticate,authTitle" />
+
+        <include
+            android:id="@+id/pinViewInclude"
+            layout="@layout/component_auth_pin_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            tools:visibility="visible"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarAuth"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start" />
+
+        <include
+            android:id="@+id/consentLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            layout="@layout/component_auth_consent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarAuth"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/successView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            tools:visibility="gone"
+            app:layout_constraintTop_toBottomOf="@+id/toolbarAuth"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guide_end"
+            app:layout_constraintStart_toEndOf="@+id/guide_start">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toTopOf="@+id/message"
+                app:layout_constraintStart_toStartOf="@+id/message"
+                app:layout_constraintEnd_toEndOf="@+id/message"
+                android:layout_marginBottom="20dp"
+                app:srcCompat="@drawable/ic_tick_teal"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/message"
+                style="@style/TextMedium"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="32dp"
+                android:text="@string/auth_msg_success"
+                android:textColor="@color/dark_blue"
+                android:gravity="center"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.5" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <include
+            android:id="@+id/progressInclude"
+            layout="@layout/component_progress"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

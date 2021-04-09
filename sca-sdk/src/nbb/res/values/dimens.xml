@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- layout margins -->
+    <dimen name="margin_outer_vertical">16dp</dimen>
+    <dimen name="margin_outer_bottom">16dp</dimen>
+    <dimen name="margin_top_space">40dp</dimen>
+
+    <!-- layout input -->
+    <dimen name="input_layout_padding_horizontal">8dp</dimen>
+
+</resources>

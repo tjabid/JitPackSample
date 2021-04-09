@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="ButtonSolidTurquoise" parent="TextMedium">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_button_fast_pay</item>
+        <item name="android:layout_marginBottom">@dimen/margin_outer_bottom</item>
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginEnd">20dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="ButtonTransparent" parent="ButtonSolidTurquoise">
+        <item name="android:background">@drawable/bg_button_outline</item>
+        <item name="android:lineSpacingExtra">4sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">@color/fast_pay_button</item>
+    </style>
+
+    <style name="InputFieldErrorStyle">
+        <item name="android:textColor">@color/colorLightRed</item>
+    </style>
+
+    <style name="InputFieldStyle">
+        <item name="android:textColor">@color/input_layout_text_color</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:textSize">@dimen/text_small</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:background">@drawable/input_bg</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:paddingStart">@dimen/input_layout_padding_horizontal</item>
+        <item name="android:paddingEnd">@dimen/input_layout_padding_horizontal</item>
+        <item name="android:singleLine">true</item>
+    </style>
+
+    <style name="TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="shapeAppearance">@android:color/transparent</item>
+        <item name="boxBackgroundMode">none</item>
+        <item name="colorControlActivated">@android:color/transparent</item>
+        <item name="colorControlNormal">@color/inputLayoutFocused</item>
+        <item name="android:fontFamily">@font/sca_regular</item>
+        <item name="android:textSize">@dimen/text_smallest</item>
+        <item name="passwordToggleEnabled">true</item>
+        <item name="errorEnabled">true</item>
+        <item name="errorTextAppearance">@style/InputFieldErrorStyle</item>
+        <!--    hint enable and colors    -->
+        <item name="hintEnabled">true</item>
+        <item name="hintTextColor">@color/grey</item>
+        <item name="hintTextAppearance">@style/TextSmallest</item>
+    </style>
+
+    <style name="TextAppearance">
+        <item name="android:textColor">@color/dark_blue</item>
+        <item name="android:lineSpacingExtra">5sp</item>
+    </style>
+
+    <style name="ToolbarTextStyle" parent="TextAppearance">
+        <item name="android:fontFamily">@font/sca_medium</item>
+        <item name="android:textSize">@dimen/text_medium</item>
+    </style>
+
+</resources>

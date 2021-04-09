@@ -1,3 +1,4 @@
+include ':sca-sdk'
 include ':jitpack_lib'
 include ':app'
 rootProject.name = "JitPackSample"

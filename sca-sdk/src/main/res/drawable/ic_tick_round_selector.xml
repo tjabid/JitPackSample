@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:state_checked="false">
+        <vector android:width="22dp"
+            android:height="22dp"
+            android:viewportWidth="22"
+            android:viewportHeight="22">
+            <path
+                android:pathData="M11,11m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
+                android:strokeWidth="1"
+                android:fillColor="#00000000"
+                android:strokeColor="#D8D8D8"
+                android:fillType="evenOdd"/>
+            <path
+                android:pathData="M3,3h16v16h-16z"
+                android:strokeAlpha="0"
+                android:strokeWidth="1"
+                android:fillColor="#DEDEDE"
+                android:fillType="evenOdd"
+                android:strokeColor="#00000000"
+                android:fillAlpha="0"/>
+            <path
+                android:pathData="M7,11.4086l2.7952,2.6072l5.7509,-6.3492"
+                android:strokeWidth="2"
+                android:fillColor="#00000000"
+                android:strokeColor="#D8D8D8"
+                android:fillType="evenOdd"
+                android:strokeLineCap="round"/>
+        </vector>
+    </item>
+    <item android:state_checked="true">
+        <vector android:autoMirrored="true" android:height="62dp"
+            android:viewportHeight="62" android:viewportWidth="62"
+            android:width="62dp">
+            <path android:fillColor="#f53535" android:pathData="M31,31m-30,0a30,30 0,1 1,60 0a30,30 0,1 1,-60 0"/>
+            <path android:fillColor="#00000000"
+                android:pathData="M20.35,31.488l6.776,6.776L41.65,23.736"
+                android:strokeColor="#fff" android:strokeLineCap="round"
+                android:strokeLineJoin="round" android:strokeWidth="4"/>
+        </vector>
+    </item>
+    <item>
+        <vector android:width="22dp"
+            android:height="22dp"
+            android:viewportWidth="22"
+            android:viewportHeight="22">
+            <path
+                android:pathData="M11,11m-10,0a10,10 0,1 1,20 0a10,10 0,1 1,-20 0"
+                android:strokeWidth="1"
+                android:fillColor="#00000000"
+                android:strokeColor="#D8D8D8"
+                android:fillType="evenOdd"/>
+            <path
+                android:pathData="M3,3h16v16h-16z"
+                android:strokeAlpha="0"
+                android:strokeWidth="1"
+                android:fillColor="#DEDEDE"
+                android:fillType="evenOdd"
+                android:strokeColor="#00000000"
+                android:fillAlpha="0"/>
+            <path
+                android:pathData="M7,11.4086l2.7952,2.6072l5.7509,-6.3492"
+                android:strokeWidth="2"
+                android:fillColor="#00000000"
+                android:strokeColor="#D8D8D8"
+                android:fillType="evenOdd"
+                android:strokeLineCap="round"/>
+        </vector>
+    </item>
+</selector>

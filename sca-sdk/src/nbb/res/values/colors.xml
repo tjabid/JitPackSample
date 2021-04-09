@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#D92127</color>
+    <color name="colorPrimaryTranslucent">#80D92127</color>
+    <color name="colorPrimaryDark">#B31B20</color>
+    <color name="colorAccent">#BEBEBE</color>
+
+    <!-- TG main button colors -->
+    <color name="fast_pay_button">#D92127</color>
+    <color name="fast_pay_button_selected">#80D92127</color>
+
+    <!-- TG toolbar colors -->
+    <color name="toolbarBackground">@color/fast_pay_button</color>
+    <color name="toolbarAccent">@color/white</color>
+
+    <!-- Input fields colors -->
+    <color name="input_layout_text_color">#333333</color>
+    <color name="inputLayoutFocused">@color/black</color>
+    <color name="inputLayoutUnfocused">#E4E4E4</color>
+
+    <color name="titleColor">#353660</color>
+    <color name="colorLightRed">#CB617B</color>
+
+</resources>

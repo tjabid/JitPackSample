@@ -4,7 +4,8 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/JitPackSample.iml" filepath="$PROJECT_DIR$/.idea/modules/JitPackSample.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/JitPackSample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/JitPackSample.app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jitpack_lib/JitPackSample.jitpack_lib.iml" filepath="$PROJECT_DIR$/.idea/modules/jitpack_lib/JitPackSample.jitpack_lib.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/sca-sdk/JitPackSample.sca-sdk.iml" filepath="$PROJECT_DIR$/.idea/modules/sca-sdk/JitPackSample.sca-sdk.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/jitpack_lib/sample.JitPackSample.jitpack_lib.iml" filepath="$PROJECT_DIR$/.idea/modules/jitpack_lib/sample.JitPackSample.jitpack_lib.iml" />
     </modules>
   </component>
 </project>

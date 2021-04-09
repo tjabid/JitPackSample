@@ -46,4 +46,6 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
     api project(":jitpack_lib")
+
+//    implementation 'com.github.tjabid:JitPackSample:1.0.0'
 }

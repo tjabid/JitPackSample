@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'maven-publish'
+    id 'com.github.dcendents.android-maven'
 }
 
 repositories {
@@ -42,47 +43,19 @@ android {
         jvmTarget = '1.8'
     }
 
-//    flavorDimensions "default"
-//    productFlavors {
-//
-//        demobank {
-//            dimension "default"
-//            versionName "1.0"
-//        }
-//
-//        kfh {
-//            dimension "default"
-//            versionName "1.0"
-//        }
-//
-//        nbb {
-//            dimension "default"
-//            versionName "1.0"
-//        }
-//
-//        ithmaar {
-//            dimension "default"
-//            versionName "1.0"
-//        }
-//
-//        khcb {
-//            dimension "default"
-//            versionName "1.0"
-//        }
-//
-//        nbk {
-//            dimension "default"
-//            versionName "1.0"
-//        }
-//        abb {
-//            dimension "default"
-//            versionName "1.0"
-//        }
-//        cl {
-//            dimension "default"
-//            versionName "1.0"
-//        }
-//    }
+    flavorDimensions "default"
+    productFlavors {
+
+        demobank {
+            dimension "default"
+            versionName "1.0"
+        }
+
+        kfh {
+            dimension "default"
+            versionName "1.0"
+        }
+    }
 }
 
 dependencies {
@@ -100,12 +73,42 @@ afterEvaluate {
     publishing {
         publications {
             // Creates a Maven publication called "release".
-            release(MavenPublication) {
-                from components.release
+            demobankRelease(MavenPublication) {
+                from components.demobankRelease
                 groupId = 'com.github.jitpack'
-                artifactId = 'android-example'
+                artifactId = 'tg-release-demobank'
                 version = '1.0'
             }
+            kfhRelease(MavenPublication) {
+                from components.kfhRelease
+                groupId = 'com.github.jitpack'
+                artifactId = 'tg-release-kfh'
+                version = '1.0'
+            }
+            demobankDebug(MavenPublication) {
+                from components.demobankDebug
+                groupId = 'com.github.jitpack'
+                artifactId = 'tg-debug-demobank'
+                version = '1.0'
+            }
+            kfhDebug(MavenPublication) {
+                from components.kfhDebug
+                groupId = 'com.github.jitpack'
+                artifactId = 'tg-debug-kfh'
+                version = '1.0'
+            }
+//            demobankDebugAndroidTest(MavenPublication) {
+//                from components.demobankDebugAndroidTest
+//                groupId = 'com.github.jitpack'
+//                artifactId = 'tg-debug-demobankDebugAndroidTest'
+//                version = '1.0'
+//            }
+//            kfhDebugAndroidTest(MavenPublication) {
+//                from components.kfhDebugAndroidTest
+//                groupId = 'com.github.jitpack'
+//                artifactId = 'tg-debug-kfhDebugAndroidTest'
+//                version = '1.0'
+//            }
         }
     }
 }

@@ -56,6 +56,14 @@ android {
             versionName "1.0"
         }
     }
+
+    libraryVariants.all { variant ->
+        variant.outputs.all {
+            def buildType = variant.buildType.name
+            def flavor = variant.productFlavors[0]
+            outputFileName = "tg-bobf-sdk-${flavor.name}-${buildType}-1.aar"
+        }
+    }
 }
 
 dependencies {

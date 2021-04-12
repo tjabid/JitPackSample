@@ -13,7 +13,7 @@ repositories {
 }
 
 group = 'com.github.jitpack'
-version = '1.0'
+version = '1.8.0'
 
 android {
     compileSdkVersion 30
@@ -85,38 +85,45 @@ afterEvaluate {
                 from components.demobankRelease
                 groupId = 'com.github.jitpack'
                 artifactId = 'tg-release-demobank'
-                version = '1.0'
+                version = '1.8.0'
             }
             kfhRelease(MavenPublication) {
                 from components.kfhRelease
                 groupId = 'com.github.jitpack'
                 artifactId = 'tg-release-kfh'
-                version = '1.0'
+                version = '1.8.0'
             }
             demobankDebug(MavenPublication) {
                 from components.demobankDebug
                 groupId = 'com.github.jitpack'
                 artifactId = 'tg-debug-demobank'
-                version = '1.0'
+                version = '1.8.0'
             }
             kfhDebug(MavenPublication) {
                 from components.kfhDebug
                 groupId = 'com.github.jitpack'
                 artifactId = 'tg-debug-kfh'
-                version = '1.0'
+                version = '1.8.0'
             }
 //            demobankDebugAndroidTest(MavenPublication) {
 //                from components.demobankDebugAndroidTest
 //                groupId = 'com.github.jitpack'
 //                artifactId = 'tg-debug-demobankDebugAndroidTest'
-//                version = '1.0'
+//                version = '1.8.0'
 //            }
 //            kfhDebugAndroidTest(MavenPublication) {
 //                from components.kfhDebugAndroidTest
 //                groupId = 'com.github.jitpack'
 //                artifactId = 'tg-debug-kfhDebugAndroidTest'
-//                version = '1.0'
+//                version = '1.8.0'
 //            }
+        }
+        repositories {
+            maven {
+                name = 'JitPackSample'
+                // change to point to your repo, e.g. http://my.org/repo
+                url = layout.buildDirectory.dir('https://jitpack.io/#tjabid/JitPackSample')
+            }
         }
     }
 }

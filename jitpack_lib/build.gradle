@@ -12,8 +12,8 @@ repositories {
     maven { url "https://jitpack.io" }
 }
 
-group = 'com.github.jitpack'
-version = '1.8.0'
+group = 'github.com/tjabid/JitPackSample'
+version = '1.8.1'
 
 android {
     compileSdkVersion 30
@@ -83,47 +83,47 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             demobankRelease(MavenPublication) {
                 from components.demobankRelease
-                groupId = 'com.github.jitpack'
+                groupId = 'github.com/tjabid/JitPackSample'
                 artifactId = 'tg-release-demobank'
-                version = '1.8.0'
+                version = '1.8.1'
             }
             kfhRelease(MavenPublication) {
                 from components.kfhRelease
-                groupId = 'com.github.jitpack'
+                groupId = 'github.com/tjabid/JitPackSample'
                 artifactId = 'tg-release-kfh'
-                version = '1.8.0'
+                version = '1.8.1'
             }
             demobankDebug(MavenPublication) {
                 from components.demobankDebug
-                groupId = 'com.github.jitpack'
+                groupId = 'github.com/tjabid/JitPackSample'
                 artifactId = 'tg-debug-demobank'
-                version = '1.8.0'
+                version = '1.8.1'
             }
             kfhDebug(MavenPublication) {
                 from components.kfhDebug
-                groupId = 'com.github.jitpack'
+                groupId = 'github.com/tjabid/JitPackSample'
                 artifactId = 'tg-debug-kfh'
-                version = '1.8.0'
+                version = '1.8.1'
             }
 //            demobankDebugAndroidTest(MavenPublication) {
 //                from components.demobankDebugAndroidTest
-//                groupId = 'com.github.jitpack'
+//                groupId = 'github.com/tjabid/JitPackSample'
 //                artifactId = 'tg-debug-demobankDebugAndroidTest'
-//                version = '1.8.0'
+//                version = '1.8.1'
 //            }
 //            kfhDebugAndroidTest(MavenPublication) {
 //                from components.kfhDebugAndroidTest
-//                groupId = 'com.github.jitpack'
+//                groupId = 'github.com/tjabid/JitPackSample'
 //                artifactId = 'tg-debug-kfhDebugAndroidTest'
-//                version = '1.8.0'
+//                version = '1.8.1'
 //            }
         }
-        repositories {
-            maven {
-                name = 'JitPackSample'
-                // change to point to your repo, e.g. http://my.org/repo
-                url = layout.buildDirectory.dir('https://jitpack.io/#tjabid/JitPackSample')
-            }
-        }
+//        repositories {
+//            maven {
+//                name = 'JitPackSample'
+//                // change to point to your repo, e.g. http://my.org/repo
+//                url = layout.buildDirectory.dir('https://jitpack.io/#tjabid/JitPackSample')
+//            }
+//        }
     }
 }

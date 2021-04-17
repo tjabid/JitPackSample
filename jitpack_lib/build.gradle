@@ -85,7 +85,7 @@ dependencies {
 }
 
 group = 'github.com.tjabid.JitPackSample'
-version = '1.9.3'
+version = '1.11'
 
 if (android.productFlavors.size() > 0) {
     android.libraryVariants.all { variant ->
@@ -100,7 +100,7 @@ if (android.productFlavors.size() > 0) {
             archives(bundleTask.archivePath) {
                 classifier variant.flavorName
                 builtBy bundleTask
-                name = project.name
+//                name = project.name
             }
         }
 

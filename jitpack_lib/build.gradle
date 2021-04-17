@@ -40,6 +40,7 @@ android {
     }
 
 //    defaultPublishConfig "lowRelease"
+    publishNonDefault true
 
     flavorDimensions "default"
     productFlavors {
@@ -86,7 +87,7 @@ dependencies {
 }
 
 group = 'com.github.tjabid.JitPackSample'
-version = '1.16'
+version = '17'
 
 if (android.productFlavors.size() > 0) {
     android.libraryVariants.all { variant ->

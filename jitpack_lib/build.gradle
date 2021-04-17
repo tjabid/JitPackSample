@@ -86,7 +86,7 @@ dependencies {
 }
 
 group = 'github.com.tjabid.JitPackSample'
-version = '1.14'
+version = '1.15'
 
 if (android.productFlavors.size() > 0) {
     android.libraryVariants.all { variant ->

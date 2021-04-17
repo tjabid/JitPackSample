@@ -85,8 +85,8 @@ dependencies {
 //    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
 
-group = 'github.com.tjabid.JitPackSample'
-version = '1.15'
+group = 'com.github.tjabid.JitPackSample'
+version = '1.16'
 
 if (android.productFlavors.size() > 0) {
     android.libraryVariants.all { variant ->

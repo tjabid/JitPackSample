@@ -55,6 +55,11 @@ android {
     }
 }
 
+//uncomment this during development to work with the local projects instead of the ones from jitpack
+configurations.all {
+    resolutionStrategy.preferProjectModules()
+}
+
 dependencies {
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"

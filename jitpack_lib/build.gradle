@@ -70,18 +70,7 @@ task sourcesJar(type: Jar) {
     from android.sourceSets.main.javaDirectories
 }
 
-task javadoc(type: Javadoc) {
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    archiveClassifier.set("javadoc")
-    from javadoc.destinationDir
-}
-
 artifacts {
-    archives javadocJar
     archives sourcesJar
 }
 
@@ -97,7 +86,7 @@ dependencies {
 }
 
 group = 'github.com.tjabid.JitPackSample'
-version = '1.13'
+version = '1.14'
 
 if (android.productFlavors.size() > 0) {
     android.libraryVariants.all { variant ->
@@ -112,7 +101,7 @@ if (android.productFlavors.size() > 0) {
             archives(bundleTask.archivePath) {
                 classifier variant.flavorName
                 builtBy bundleTask
-//                name = project.name
+                name = project.name
             }
         }
 

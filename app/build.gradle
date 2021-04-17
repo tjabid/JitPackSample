@@ -2,11 +2,11 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'kotlin-kapt'
-    id 'androidx.navigation.safeargs.kotlin'
-    id 'kotlin-android-extensions'
-    id 'kotlinx-serialization'
+//    id 'androidx.navigation.safeargs.kotlin'
+//    id 'kotlin-android-extensions'
+//    id 'kotlinx-serialization'
 //    id 'org.jetbrains.dokka'
-    id 'com.google.gms.google-services'
+//    id 'com.google.gms.google-services'
 }
 
 android {

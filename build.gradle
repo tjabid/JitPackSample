@@ -7,7 +7,6 @@ buildscript {
     repositories {
         google()
         jcenter()
-        mavenCentral()
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.1.2"
@@ -15,14 +14,14 @@ buildscript {
 
         classpath 'com.github.dcendents:android-maven-gradle-plugin:2.1'
 
-        // Firebase
-        classpath 'com.google.gms:google-services:4.3.5'
-
-        // Navigation
-        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
-
-        // extensions plugin
-        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
+//        // Firebase
+//        classpath 'com.google.gms:google-services:4.3.5'
+//
+//        // Navigation
+//        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+//
+//        // extensions plugin
+//        classpath "org.jetbrains.kotlin:kotlin-serialization:$kotlin_version"
 
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
@@ -35,7 +34,6 @@ buildscript {
 
 allprojects {
     repositories {
-        mavenCentral()
         google()
         jcenter()
         maven { url 'https://jitpack.io' }
